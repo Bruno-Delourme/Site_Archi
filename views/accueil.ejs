@@ -7,8 +7,9 @@
     <title>Accueil</title>
 </head>
 <body>
+    <a id="top"></a>
     <div class="header">
-        <div class="logo-title-container">
+        <a href="/" class="logo-title-container">
             <div class="logo_container">
                 <img src="/images/Logo.jpg" alt="logo">
             </div>
@@ -16,9 +17,9 @@
                 <h1>ABIGAIL ERENATI</h1>
                 <h2>DESIGNER D'INTERIEUR</h2>
             </div>
-        </div>
+        </a>
         <div class="navbar">
-            <a href="/">A PROPOS</a>
+            <a href="/aPropos">A PROPOS</a>
             <a href="/projets">PROJETS</a>
             <a href="/contact">CONTACT</a>
         </div>
@@ -36,8 +37,16 @@
             <img src="/images/cuisine_americaine_rouge.jpg" alt="Accueil">
         </div>
     </div>
-    <div class="footer">
-        &copy; 2024 Abigail Erenati
+    <div class="footer" id="footer">
+         AE
     </div>
+    <script>
+        document.getElementById("footer").onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
 </body>
 </html>
