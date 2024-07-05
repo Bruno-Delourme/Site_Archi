@@ -10,6 +10,8 @@ app.set('views', path.join(__dirname, 'views'));
 // Configurer le middleware pour les fichiers statiques
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 // Routes
 app.get('/', (req, res) => {
   res.render('accueil');
