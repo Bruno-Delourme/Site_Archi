@@ -263,5 +263,10 @@ img {
   z-index: 3;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0); /* Ajouter une couleur de fond pour la lisibilité */
-  
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer:hover {
+  transform: scale(1.1); 
 }
