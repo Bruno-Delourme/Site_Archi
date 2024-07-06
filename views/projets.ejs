@@ -9,7 +9,7 @@
 <body>
     <a id="top"></a>
     <div class="header">
-        <div class="logo-title-container">
+        <a href="/" class="logo-title-container">
             <div class="logo_container">
                 <img src="/images/Logo.jpg" alt="logo">
             </div>
@@ -17,6 +17,7 @@
                 <h1>ABIGAIL ERENATI</h1>
                 <h2>DESIGNER D'INTERIEUR</h2>
             </div>
+        </a>
         </div>
         <div class="navbar">
             <a href="/">A PROPOS</a>
@@ -25,7 +26,7 @@
         </div>
     </div>
     <div class="container_contact">
-        <h2>PROJETS</h2>
+        <h1>PROJETS</h1>
         <div>
             <img src="/images/project1.jpg" alt="Projet 1">
             <img src="/images/project2.jpg" alt="Projet 2">
@@ -33,7 +34,7 @@
         </div>
     </div>
     <div class="footer" id="footer">
-        AE
+        <img src="/images/fleche.png" alt="">
    </div>
    <script>
        document.getElementById("footer").onclick = function() {
@@ -42,6 +43,14 @@
                behavior: "smooth"
            });
        };
+
+       document.addEventListener('mousemove', function() {
+           document.body.style.setProperty('--scrollbar-opacity', '1');
+           clearTimeout(window.scrollbarTimer);
+           window.scrollbarTimer = setTimeout(function() {
+               document.body.style.setProperty('--scrollbar-opacity', '0');
+           }, 2000); // Cacher après 2 secondes d'inactivité
+       });
    </script>
 </body>
 </html>

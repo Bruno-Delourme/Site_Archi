@@ -115,6 +115,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  --scrollbar-opacity: 0; 
 }
 
 h1 {
@@ -189,7 +190,7 @@ p {
 }
 
 .container_contact {
-  margin: auto;
+  margin-top : 5rem;
   text-align: center;
 }
 
@@ -235,10 +236,12 @@ img {
 
 .image-caption {
   position: absolute;
-  bottom: 0;
+  margin-top: 12px;
+  top: 0;
   width: 100%;
   background-color: rgba(155, 155, 155, 0.322); /* Fond semi-transparent */
   color: white;
+  font-family: "D-DIN";
   text-align: center;
   padding: 10px 0;
   opacity: 0;
@@ -250,8 +253,30 @@ img {
 }
 
 
-.footer {
+
+.footer img {
   text-align: left;
+  margin-left: 2.3rem;
+  margin-bottom: 1.2rem;
+  height: 2rem;
+  width: auto;
+  position: fixed;
+  opacity: 0.3; 
+  bottom: 0rem;
+  z-index: 3;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: rotate(90deg); /* Rotation permanente */
+}
+
+.footer:hover img {
+  transform: rotate(90deg) scale(1.1); /* Rotation permanente et effet de scale au survol */
+}
+
+
+
+.footerSignature{
+  text-align: center;
   padding: 1rem;
   margin-bottom: 0.2rem;
   font-family: "Creation_write";
@@ -261,12 +286,24 @@ img {
   bottom: 0rem; 
   width: 100%;
   z-index: 3;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0); /* Ajouter une couleur de fond pour la lisibilité */
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-.footer:hover {
-  transform: scale(1.1); 
+::-webkit-scrollbar {
+  width: 8px; /* Largeur de la barre de défilement */
+  transition: opacity 0.3s;
+  opacity: var(--scrollbar-opacity); /* Utilisation de la variable CSS pour l'opacité */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de la piste */
+  border-radius: 6px; /* Arrondi de la piste */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888888bb; /* Couleur de la barre de défilement */
+  border-radius: 6px; /* Arrondi de la barre de défilement */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5555559d; /* Couleur de la barre de défilement au survol */
 }
